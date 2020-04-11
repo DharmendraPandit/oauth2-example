@@ -1,0 +1,98 @@
+ html, body {
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+            }
+            body {
+                background-color: #202020;
+                background-image: url();
+                background-repeat: repeat-y;
+                background-position: center;
+                background-origin: border-box;
+                background-size: 100%;
+                font-family: sans-serif;
+                padding-top: 66px;
+            }
+            .logo-header {
+                display:flex;
+                justify-content: center;
+                margin: 0px auto 36px auto;
+            }
+            .logo-header-left {
+                flex: 0 0 auto;
+            }
+            .logo-header-right {
+                display: flex;
+                flex: 0 0 155px;
+                padding-left: 10px;
+            }
+            .logo-header img {
+                display:block;
+                flex: 0 0 154px;
+                margin: 0px auto;
+                width: 154px;
+            }
+            .powered-by {
+                border-left: 1px solid white;
+                color: #9B9B9B;
+                padding-left: 10px;
+            }
+            .alert-message {
+                display: flex;
+                justify-content: center;
+                color:red;
+            }
+            .powered-by span {
+                font-size: 14px;
+            }
+            .techolution_logo {
+                display: block;
+                width: 132px;
+            }
+            .login-header {
+                color: white;
+                font-size:30px;
+                text-align:center;
+            }
+            table td {
+                color: white;
+            }
+            input {
+                border: 1px solid #aaa;
+                box-sizing: border-box;
+                color: #000;
+                font-size: 14px;
+                height: 40px;
+                margin-bottom: 24px;
+                padding: 12px;
+                width: 100%;
+            }
+           input[type=submit] {
+                background-color: red;
+                border-radius: 0px;
+                border: none;
+                color: white;
+                font-weight: bold;
+           }
+           table {
+             width: 400px;
+           }
+           @media only screen and (max-width: 468px) {
+                .logo-header img {
+                    width: 100px;
+                }
+                .powered-by span {
+                    font-size: 12px;
+                }
+                .techolution_logo {
+                    display: block;
+                    width: 110px;
+                }
+                .login-header {
+                    font-size:18px;
+                }
+                table {
+                    width: 300px;
+                }
+            }

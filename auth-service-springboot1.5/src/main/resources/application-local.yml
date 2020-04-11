@@ -1,0 +1,10 @@
+config:
+  oauth2:
+    ui-uri: http://localhost:4200/callback
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/auth-db
+
+      
