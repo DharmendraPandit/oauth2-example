@@ -25,7 +25,7 @@
             background-position: top center;
             background-size: cover;
             background: linear-gradient(to right, rgba(171, 233, 205, 0.9) 20%,
-                    rgba(62, 173, 207, 0.6)), url('https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80');
+                    rgba(62, 173, 207, 0.6)), url('');
         }
 
         .login-body {
@@ -51,7 +51,7 @@
             background-color: #abe9cd;
             clip-path: polygon(44% 0, 100% 0%, 100% 100%, 0 100%);
             background: linear-gradient(to right, rgba(171, 233, 205, 0.9) 20%,
-                    rgba(62, 173, 207, 0.6)), url('https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80');
+                    rgba(62, 173, 207, 0.6)), url('');
             background-repeat: no-repeat;
             background-position: top center;
             background-size: cover;
@@ -114,7 +114,7 @@
     <div class="login-body ">
         <div class="login-component">
             <img class="image"
-                 src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/MT_New_Logo.png/627px-MT_New_Logo.png"/>
+                 src=""/>
             <form action="/auth/login" method="POST" name="f">
 
                 <table align="center">
@@ -143,11 +143,11 @@
                     <tr>
                         <td class="forgot-pwd-td" colspan="2">
                             <div th:if="${(param.env != null) and (param.env[0] == 'qa')}">
-                                <a href="http://mt-qa.techolution.com:4201/request-password">Forgot Password?</a>
+                                <a href="">Forgot Password?</a>
                             </div>
 
                             <div th:if="${(param.env == null)}">
-                                <a href="http://sm04.telecom.mu/request-password">Forgot Password?</a>
+                                <a href="">Forgot Password?</a>
                             </div>
 
                         </td>
