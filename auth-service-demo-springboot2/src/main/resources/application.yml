@@ -1,0 +1,10 @@
+server:
+  port: 9091
+  servlet:
+    contextPath: /auth
+
+spring:
+  application:
+    name: auth-server
+  profiles:
+    active: local
