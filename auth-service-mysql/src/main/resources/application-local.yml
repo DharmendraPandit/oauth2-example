@@ -1,0 +1,21 @@
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/auth-db
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    #url: jdbc:mysql://localhost:3309/oauthdb?useSSL=false
+    #url: jdbc:mysql://35.226.92.207:3306/auth_prod?useSSL=false
+    url: jdbc:mysql://35.226.92.207:3306/auth_prod?useSSL=false
+    username: admin #admin
+    password: techo#2017 #techo#2017
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #driver-class-name: com.mysql.jdbc.Driver

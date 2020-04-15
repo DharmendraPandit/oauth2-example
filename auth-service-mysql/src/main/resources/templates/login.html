@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MT</title>
+</head>
+
+<body>
+<style>
+        * {
+            border: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .login {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            background: linear-gradient(to right, rgba(171, 233, 205, 0.9) 20%,
+                    rgba(62, 173, 207, 0.6)), url('');
+        }
+
+        .login-body {
+            width: 70%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+            border-radius: 8px;
+            background: white;
+        }
+
+        .login-component {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .login-image {
+            background-color: #abe9cd;
+            clip-path: polygon(44% 0, 100% 0%, 100% 100%, 0 100%);
+            background: linear-gradient(to right, rgba(171, 233, 205, 0.9) 20%,
+                    rgba(62, 173, 207, 0.6)), url('');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            border-radius: 8px;
+        }
+
+        .image {
+            width: 140px;
+            margin-bottom: 1rem;
+        }
+
+
+        input {
+            width: 290px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+            outline: none;
+            border: none;
+            height: 45px;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            padding-left: 10px;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+             width: 290px;
+            color: navy;
+            background: transparent;
+            outline: none;
+            text-align: center;
+            border: 1px groove navy;
+            margin-top: 0.7rem;
+            height: 40px;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            color: white;
+            background: navy;
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form_login {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .error {
+            color: red;
+            background: transparent;
+            outline: none;
+        }
+
+</style>
+<div class="login">
+    <div class="login-body ">
+        <div class="login-component">
+            <img class="image"
+                 src=""/>
+            <form action="/auth/login" method="POST" name="f">
+
+                <table align="center">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div th:if="${param.error}">
+                                <p class="error">Invalid username or password.</p>
+                            </div>
+                            <div th:if="${param.logout}">
+                                <p class="logout">You have been logged out.</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="email-td">
+                            <input class="email-field" name="username" placeholder="*Email ID" size="30" type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pwd-td">
+                            <input class="password-field" name="password" placeholder="*Password" size="30"
+                                   type="password"/></td>
+                    </tr>
+                    <tr>
+                        <td class="forgot-pwd-td" colspan="2">
+                            <div th:if="${(param.env != null) and (param.env[0] == 'qa')}">
+                                <a href="">Forgot Password?</a>
+                            </div>
+
+                            <div th:if="${(param.env == null)}">
+                                <a href="">Forgot Password?</a>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <button class="btn" type="submit">Submit</button>
+                        </td>
+                    </tr>
+
+                    <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="login-image">
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
